@@ -3,5 +3,5 @@ HTML | CSS | JAVASCRIPT
 
 [OpenWeather API](https://openweathermap.org/current) documentation
 
-<img src="screenshot.png">
+<img src="img/screenshot.png">
 
