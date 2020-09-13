@@ -1,6 +1,6 @@
 const api = {
   key: "5a03d725cbe074961054dbf1dbf55ce4",
-  baseurl: "https://api.openweathermap.org/data/2.5/"
+  baseurl: "https://api.openweathermap.org/data/2.5/weather/"
 }
 
 // search
@@ -15,7 +15,7 @@ function setQuery(event) {
 }
 
 function getResults(query) {
-  fetch(`${api.baseurl}weather?q=${query}&AAPID=${api.key}`)
+  fetch(`${api.baseurl}?q=${query}&units=imperial&APPID=${api.key}`)
     .catch((error) => {
       console.error('Error: ', error);
     })
@@ -51,5 +51,5 @@ function dateBuilder(d) {
   let month = months[d.getMonth()];
   let year = d.getFullYear();
 
-  return `${day} ${date} ${month} ${year}`;
+  return `${day}, ${date} ${month} ${year}`;
 }
